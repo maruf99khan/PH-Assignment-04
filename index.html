@@ -18,46 +18,51 @@
     />
   </head>
   <body class="h-full w-full bg-[#f8fafc] font-[Geist]">
-    <section class="mx-60 sm:mx-4 my-10 sm:my-4">
-      <h1 id="heading" class="text-[40px] sm:text-[24px] text-[#002c5c] font-bold mb-[20px]">
+    <!-- Header / Stats Section -->
+    <section class="mx-4 my-4 sm:mx-60 sm:my-10">
+      <h1
+        id="heading"
+        class="text-[24px] sm:text-[40px] text-[#002c5c] font-bold mb-[20px]"
+      >
         Job Application Tracker
       </h1>
-      <div class="flex flex-col gap-4 sm:gap-3">
-        <div class="w-full bg-[#ffffff] h-auto rounded-md shadow-sm">
+      <!-- Stats Cards: stacked on mobile, side-by-side on sm+ -->
+      <div class="flex flex-col gap-3 sm:flex-row sm:justify-between sm:gap-0">
+        <div class="w-full sm:w-[30%] bg-[#ffffff] h-auto rounded-md shadow-sm">
           <h4
-            class="px-[20px] sm:px-3 pt-[15px] sm:pt-3 text-[16px] sm:text-[14px] font-medium text-[#353e4c]"
+            class="px-3 sm:px-[20px] pt-3 sm:pt-[15px] text-[14px] sm:text-[16px] font-medium text-[#353e4c]"
           >
             Total
           </h4>
           <h2
             id="total-jobs"
-            class="px-[20px] sm:px-3 py-[10px] text-[#002c5c] text-[24px] sm:text-[20px] font-bold"
+            class="px-3 sm:px-[20px] py-[10px] text-[#002c5c] text-[20px] sm:text-[24px] font-bold"
           >
             0
           </h2>
         </div>
-        <div class="w-full bg-[#ffffff] h-auto rounded-md shadow-sm">
+        <div class="w-full sm:w-[30%] bg-[#ffffff] h-auto rounded-md shadow-sm">
           <h4
-            class="px-[20px] sm:px-3 pt-[15px] sm:pt-3 text-[16px] sm:text-[14px] font-medium text-[#353e4c]"
+            class="px-3 sm:px-[20px] pt-3 sm:pt-[15px] text-[14px] sm:text-[16px] font-medium text-[#353e4c]"
           >
             Interview
           </h4>
           <h2
             id="interview-jobs"
-            class="px-[20px] sm:px-3 py-[10px] text-green-500 text-[24px] sm:text-[20px] font-bold"
+            class="px-3 sm:px-[20px] py-[10px] text-green-500 text-[20px] sm:text-[24px] font-bold"
           >
             0
           </h2>
         </div>
-        <div class="w-full bg-[#ffffff] h-auto rounded-md shadow-sm">
+        <div class="w-full sm:w-[30%] bg-[#ffffff] h-auto rounded-md shadow-sm">
           <h4
-            class="px-[20px] sm:px-3 pt-[15px] sm:pt-3 text-[16px] sm:text-[14px] font-medium text-[#353e4c]"
+            class="px-3 sm:px-[20px] pt-3 sm:pt-[15px] text-[14px] sm:text-[16px] font-medium text-[#353e4c]"
           >
             Rejected
           </h4>
           <h2
             id="rejected-jobs"
-            class="px-[20px] sm:px-3 py-[10px] text-red-500 text-[24px] sm:text-[20px] font-bold"
+            class="px-3 sm:px-[20px] py-[10px] text-red-500 text-[20px] sm:text-[24px] font-bold"
           >
             0
           </h2>
@@ -65,15 +70,18 @@
       </div>
     </section>
 
-    <section id="cards" class="mx-60 sm:mx-4 my-6 sm:my-4">
-      <div class="flex flex-col sm:flex-col gap-4 mb-[20px] sm:mb-3">
+    <!-- Cards Section -->
+    <section id="cards" class="mx-4 my-4 sm:mx-60 sm:my-6">
+      <div
+        class="flex flex-col gap-3 sm:flex-row sm:justify-between sm:gap-0 mb-3 sm:mb-[20px]"
+      >
         <div>
-          <h1 class="text-[#002c5c] font-semibold text-[20px] sm:text-[18px]">
+          <h1 class="text-[#002c5c] font-semibold text-[18px] sm:text-[20px]">
             Available Jobs
           </h1>
         </div>
         <div>
-          <h1 class="text-[16px] sm:text-[14px] font-medium text-[#778599]">
+          <h1 class="text-[14px] sm:text-[16px] font-medium text-[#778599]">
             <span id="jobs-count">0</span> of
             <span id="total-jobs-count"></span> Jobs
           </h1>
@@ -81,22 +89,22 @@
       </div>
 
       <!-- sorting tabs -->
-      <div class="flex gap-4 sm:gap-2 mb-6 sm:mb-4 flex-wrap">
+      <div class="flex gap-2 sm:gap-4 mb-3 sm:mb-6 flex-wrap">
         <button
           id="all-btn"
-          class="tab-btn active px-4 sm:px-3 py-2 sm:py-1 rounded-md bg-blue-500 text-white text-sm sm:text-xs"
+          class="tab-btn active px-3 sm:px-4 py-1 sm:py-2 rounded-md bg-blue-500 text-white text-[12px] sm:text-[14px]"
         >
           All
         </button>
         <button
           id="interview-btn"
-          class="tab-btn px-4 sm:px-3 py-2 sm:py-1 rounded-md text-gray-500 bg-white border-2 text-sm sm:text-xs"
+          class="tab-btn px-3 sm:px-4 py-1 sm:py-2 rounded-md text-gray-500 bg-white border-2 text-[12px] sm:text-[14px]"
         >
           Interview
         </button>
         <button
           id="rejected-btn"
-          class="tab-btn px-4 sm:px-3 py-2 sm:py-1 rounded-md text-gray-500 bg-white border-2 text-sm sm:text-xs"
+          class="tab-btn px-3 sm:px-4 py-1 sm:py-2 rounded-md text-gray-500 bg-white border-2 text-[12px] sm:text-[14px]"
         >
           Rejected
         </button>
@@ -105,384 +113,445 @@
       <!-- Job Card 1 -->
       <div
         id="card-1"
-        class="job-card h-auto w-full p-5 sm:p-3 shadow-md bg-white rounded-md relative mb-6 sm:mb-3"
+        class="job-card h-auto w-full p-3 sm:p-5 shadow-md bg-white rounded-md relative mb-3 sm:mb-6"
         status="not-applied"
       >
-        <h1 class="text-[18px] sm:text-[16px] font-semibold text-[#002c5c] mb-2">
+        <h1
+          class="text-[16px] sm:text-[18px] font-semibold text-[#002c5c] mb-2"
+        >
           TechNova Solutions
         </h1>
-        <p class="text-[16px] sm:text-[14px] text-[#64748b] mb-1">Frontend Developer</p>
-        <p class="text-[14px] sm:text-[12px] text-[#64748b] mb-1">
+        <p class="text-[14px] sm:text-[16px] text-[#64748b] mb-1">
+          Frontend Developer
+        </p>
+        <p class="text-[12px] sm:text-[14px] text-[#64748b] mb-1">
           Onsite • Full-time • $90,000 - $120,000
         </p>
         <button
-          class="status-btn p-3 sm:p-2 bg-[#eef4ff] rounded-md m-2 sm:m-1 ml-0 text-[14px] sm:text-[12px] font-medium text-[#002c5c]"
+          class="status-btn p-2 sm:p-3 bg-[#eef4ff] rounded-md m-1 sm:m-2 ml-0 text-[12px] sm:text-[14px] font-medium text-[#002c5c]"
         >
           NOT APPLIED
         </button>
-        <p class="text-[14px] sm:text-[12px] font-normal text-[#323b49] mb-6 sm:mb-4">
+        <p
+          class="text-[12px] sm:text-[14px] font-normal text-[#323b49] mb-4 sm:mb-6"
+        >
           Build responsive web interfaces using React.js and Tailwind CSS.
           Collaborate with design teams to improve UX.
         </p>
         <button
-          class="add-interview p-3 sm:p-2 rounded-md border-2 border-green-500 text-green-500 mr-3 sm:mr-2 text-sm sm:text-xs"
+          class="add-interview p-2 sm:p-3 rounded-md border-2 border-green-500 text-green-500 mr-2 sm:mr-3 text-sm sm:text-base"
         >
           INTERVIEW
         </button>
         <button
-          class="add-rejected p-3 sm:p-2 rounded-md border-2 border-red-500 text-red-500 text-sm sm:text-xs"
+          class="add-rejected p-2 sm:p-3 rounded-md border-2 border-red-500 text-red-500 text-sm sm:text-base"
         >
           REJECTED
         </button>
-        <button class="delete-btn absolute right-5 sm:right-3 top-3 sm:top-2">
-          <i class="fa-regular fa-trash-can"></i>
+        <button class="delete-btn absolute right-3 sm:right-5 top-2 sm:top-3">
+          <i class="fa-regular fa-trash-can text-xs sm:text-[14px]"></i>
         </button>
       </div>
 
       <!-- Job Card 2 -->
       <div
         id="card-2"
-        class="job-card h-auto w-full p-5 sm:p-3 shadow-md bg-white rounded-md relative mb-6 sm:mb-3"
+        class="job-card h-auto w-full p-3 sm:p-5 shadow-md bg-white rounded-md relative mb-3 sm:mb-6"
         status="not-applied"
       >
-        <h1 class="text-[18px] sm:text-[16px] font-semibold text-[#002c5c] mb-2">
+        <h1
+          class="text-[16px] sm:text-[18px] font-semibold text-[#002c5c] mb-2"
+        >
           ByteWorks Inc
         </h1>
-        <p class="text-[16px] sm:text-[14px] text-[#64748b] mb-1">Backend Engineer</p>
-        <p class="text-[14px] sm:text-[12px] text-[#64748b] mb-1">
+        <p class="text-[14px] sm:text-[16px] text-[#64748b] mb-1">
+          Backend Engineer
+        </p>
+        <p class="text-[12px] sm:text-[14px] text-[#64748b] mb-1">
           Remote • Full-time • $110,000 - $140,000
         </p>
         <button
-          class="status-btn p-3 sm:p-2 bg-[#eef4ff] rounded-md m-2 sm:m-1 ml-0 text-[14px] sm:text-[12px] font-medium text-[#002c5c]"
+          class="status-btn p-2 sm:p-3 bg-[#eef4ff] rounded-md m-1 sm:m-2 ml-0 text-[12px] sm:text-[14px] font-medium text-[#002c5c]"
         >
           NOT APPLIED
         </button>
-        <p class="text-[14px] sm:text-[12px] font-normal text-[#323b49] mb-6 sm:mb-4">
+        <p
+          class="text-[12px] sm:text-[14px] font-normal text-[#323b49] mb-4 sm:mb-6"
+        >
           Develop scalable REST APIs in Node.js and Python. Optimize database
           queries and ensure high availability.
         </p>
         <button
-          class="add-interview p-3 sm:p-2 rounded-md border-2 border-green-500 text-green-500 mr-3 sm:mr-2 text-sm sm:text-xs"
+          class="add-interview p-2 sm:p-3 rounded-md border-2 border-green-500 text-green-500 mr-2 sm:mr-3 text-sm sm:text-base"
         >
           INTERVIEW
         </button>
         <button
-          class="add-rejected p-3 sm:p-2 rounded-md border-2 border-red-500 text-red-500 text-sm sm:text-xs"
+          class="add-rejected p-2 sm:p-3 rounded-md border-2 border-red-500 text-red-500 text-sm sm:text-base"
         >
           REJECTED
         </button>
-        <button class="delete-btn absolute right-5 sm:right-3 top-3 sm:top-2">
-          <i class="fa-regular fa-trash-can"></i>
+        <button class="delete-btn absolute right-3 sm:right-5 top-2 sm:top-3">
+          <i class="fa-regular fa-trash-can text-xs sm:text-[14px]"></i>
         </button>
       </div>
 
       <!-- Job Card 3 -->
       <div
         id="card-3"
-        class="job-card h-auto w-full p-5 sm:p-3 shadow-md bg-white rounded-md relative mb-6 sm:mb-3"
+        class="job-card h-auto w-full p-3 sm:p-5 shadow-md bg-white rounded-md relative mb-3 sm:mb-6"
         status="not-applied"
       >
-        <h1 class="text-[18px] sm:text-[16px] font-semibold text-[#002c5c] mb-2">
+        <h1
+          class="text-[16px] sm:text-[18px] font-semibold text-[#002c5c] mb-2"
+        >
           CloudCore Labs
         </h1>
-        <p class="text-[16px] sm:text-[14px] text-[#64748b] mb-1">DevOps Engineer</p>
-        <p class="text-[14px] sm:text-[12px] text-[#64748b] mb-1">
+        <p class="text-[14px] sm:text-[16px] text-[#64748b] mb-1">
+          DevOps Engineer
+        </p>
+        <p class="text-[12px] sm:text-[14px] text-[#64748b] mb-1">
           Remote • Contract • $80/hr - $120/hr
         </p>
         <button
-          class="status-btn p-3 sm:p-2 bg-[#eef4ff] rounded-md m-2 sm:m-1 ml-0 text-[14px] sm:text-[12px] font-medium text-[#002c5c]"
+          class="status-btn p-2 sm:p-3 bg-[#eef4ff] rounded-md m-1 sm:m-2 ml-0 text-[12px] sm:text-[14px] font-medium text-[#002c5c]"
         >
           NOT APPLIED
         </button>
-        <p class="text-[14px] sm:text-[12px] font-normal text-[#323b49] mb-6 sm:mb-4">
+        <p
+          class="text-[12px] sm:text-[14px] font-normal text-[#323b49] mb-4 sm:mb-6"
+        >
           Implement CI/CD pipelines, automate deployments, and manage cloud
           infrastructure on AWS and Azure.
         </p>
         <button
-          class="add-interview p-3 sm:p-2 rounded-md border-2 border-green-500 text-green-500 mr-3 sm:mr-2 text-sm sm:text-xs"
+          class="add-interview p-2 sm:p-3 rounded-md border-2 border-green-500 text-green-500 mr-2 sm:mr-3 text-sm sm:text-base"
         >
           INTERVIEW
         </button>
         <button
-          class="add-rejected p-3 sm:p-2 rounded-md border-2 border-red-500 text-red-500 text-sm sm:text-xs"
+          class="add-rejected p-2 sm:p-3 rounded-md border-2 border-red-500 text-red-500 text-sm sm:text-base"
         >
           REJECTED
         </button>
-        <button class="delete-btn absolute right-5 sm:right-3 top-3 sm:top-2">
-          <i class="fa-regular fa-trash-can"></i>
+        <button class="delete-btn absolute right-3 sm:right-5 top-2 sm:top-3">
+          <i class="fa-regular fa-trash-can text-xs sm:text-[14px]"></i>
         </button>
       </div>
 
       <!-- Job Card 4 -->
       <div
         id="card-4"
-        class="job-card h-auto w-full p-5 sm:p-3 shadow-md bg-white rounded-md relative mb-6 sm:mb-3"
+        class="job-card h-auto w-full p-3 sm:p-5 shadow-md bg-white rounded-md relative mb-3 sm:mb-6"
         status="not-applied"
       >
-        <h1 class="text-[18px] sm:text-[16px] font-semibold text-[#002c5c] mb-2">
+        <h1
+          class="text-[16px] sm:text-[18px] font-semibold text-[#002c5c] mb-2"
+        >
           DataSense AI
         </h1>
-        <p class="text-[16px] sm:text-[14px] text-[#64748b] mb-1">Machine Learning Engineer</p>
-        <p class="text-[14px] sm:text-[12px] text-[#64748b] mb-1">
+        <p class="text-[14px] sm:text-[16px] text-[#64748b] mb-1">
+          Machine Learning Engineer
+        </p>
+        <p class="text-[12px] sm:text-[14px] text-[#64748b] mb-1">
           Hybrid • Full-time • $120,000 - $160,000
         </p>
         <button
-          class="status-btn p-3 sm:p-2 bg-[#eef4ff] rounded-md m-2 sm:m-1 ml-0 text-[14px] sm:text-[12px] font-medium text-[#002c5c]"
+          class="status-btn p-2 sm:p-3 bg-[#eef4ff] rounded-md m-1 sm:m-2 ml-0 text-[12px] sm:text-[14px] font-medium text-[#002c5c]"
         >
           NOT APPLIED
         </button>
-        <p class="text-[14px] sm:text-[12px] font-normal text-[#323b49] mb-6 sm:mb-4">
+        <p
+          class="text-[12px] sm:text-[14px] font-normal text-[#323b49] mb-4 sm:mb-6"
+        >
           Build ML models for predictive analytics. Work with large datasets and
           optimize model performance.
         </p>
         <button
-          class="add-interview p-3 sm:p-2 rounded-md border-2 border-green-500 text-green-500 mr-3 sm:mr-2 text-sm sm:text-xs"
+          class="add-interview p-2 sm:p-3 rounded-md border-2 border-green-500 text-green-500 mr-2 sm:mr-3 text-sm sm:text-base"
         >
           INTERVIEW
         </button>
         <button
-          class="add-rejected p-3 sm:p-2 rounded-md border-2 border-red-500 text-red-500 text-sm sm:text-xs"
+          class="add-rejected p-2 sm:p-3 rounded-md border-2 border-red-500 text-red-500 text-sm sm:text-base"
         >
           REJECTED
         </button>
-        <button class="delete-btn absolute right-5 sm:right-3 top-3 sm:top-2">
-          <i class="fa-regular fa-trash-can"></i>
+        <button class="delete-btn absolute right-3 sm:right-5 top-2 sm:top-3">
+          <i class="fa-regular fa-trash-can text-xs sm:text-[14px]"></i>
         </button>
       </div>
 
       <!-- Job Card 5 -->
       <div
         id="card-5"
-        class="job-card h-auto w-full p-5 sm:p-3 shadow-md bg-white rounded-md relative mb-6 sm:mb-3"
+        class="job-card h-auto w-full p-3 sm:p-5 shadow-md bg-white rounded-md relative mb-3 sm:mb-6"
         status="not-applied"
       >
-        <h1 class="text-[18px] sm:text-[16px] font-semibold text-[#002c5c] mb-2">
+        <h1
+          class="text-[16px] sm:text-[18px] font-semibold text-[#002c5c] mb-2"
+        >
           FinTech Hive
         </h1>
-        <p class="text-[16px] sm:text-[14px] text-[#64748b] mb-1">Full Stack Developer</p>
-        <p class="text-[14px] sm:text-[12px] text-[#64748b] mb-1">
+        <p class="text-[14px] sm:text-[16px] text-[#64748b] mb-1">
+          Full Stack Developer
+        </p>
+        <p class="text-[12px] sm:text-[14px] text-[#64748b] mb-1">
           Remote • Full-time • $100,000 - $150,000
         </p>
         <button
-          class="status-btn p-3 sm:p-2 bg-[#eef4ff] rounded-md m-2 sm:m-1 ml-0 text-[14px] sm:text-[12px] font-medium text-[#002c5c]"
+          class="status-btn p-2 sm:p-3 bg-[#eef4ff] rounded-md m-1 sm:m-2 ml-0 text-[12px] sm:text-[14px] font-medium text-[#002c5c]"
         >
           NOT APPLIED
         </button>
-        <p class="text-[14px] sm:text-[12px] font-normal text-[#323b49] mb-6 sm:mb-4">
+        <p
+          class="text-[12px] sm:text-[14px] font-normal text-[#323b49] mb-4 sm:mb-6"
+        >
           Work on both frontend and backend for FinTech web applications.
           Maintain API security and performance.
         </p>
         <button
-          class="add-interview p-3 sm:p-2 rounded-md border-2 border-green-500 text-green-500 mr-3 sm:mr-2 text-sm sm:text-xs"
+          class="add-interview p-2 sm:p-3 rounded-md border-2 border-green-500 text-green-500 mr-2 sm:mr-3 text-sm sm:text-base"
         >
           INTERVIEW
         </button>
         <button
-          class="add-rejected p-3 sm:p-2 rounded-md border-2 border-red-500 text-red-500 text-sm sm:text-xs"
+          class="add-rejected p-2 sm:p-3 rounded-md border-2 border-red-500 text-red-500 text-sm sm:text-base"
         >
           REJECTED
         </button>
-        <button class="delete-btn absolute right-5 sm:right-3 top-3 sm:top-2">
-          <i class="fa-regular fa-trash-can"></i>
+        <button class="delete-btn absolute right-3 sm:right-5 top-2 sm:top-3">
+          <i class="fa-regular fa-trash-can text-xs sm:text-[14px]"></i>
         </button>
       </div>
 
       <!-- Job Card 6 -->
       <div
         id="card-6"
-        class="job-card h-auto w-full p-5 shadow-md bg-white rounded-md relative mb-6"
+        class="job-card h-auto w-full p-3 sm:p-5 shadow-md bg-white rounded-md relative mb-3 sm:mb-6"
         status="not-applied"
       >
-        <h1 class="text-[18px] font-semibold text-[#002c5c] mb-2">
+        <h1
+          class="text-[16px] sm:text-[18px] font-semibold text-[#002c5c] mb-2"
+        >
           NeoCloud Systems
         </h1>
-        <p class="text-[16px] text-[#64748b] mb-1">UI/UX Designer</p>
-        <p class="text-[14px] text-[#64748b] mb-1">
+        <p class="text-[14px] sm:text-[16px] text-[#64748b] mb-1">
+          UI/UX Designer
+        </p>
+        <p class="text-[12px] sm:text-[14px] text-[#64748b] mb-1">
           Onsite • Full-time • $70,000 - $100,000
         </p>
         <button
-          class="status-btn p-3 bg-[#eef4ff] rounded-md m-2 ml-0 text-[14px] font-medium text-[#002c5c]"
+          class="status-btn p-2 sm:p-3 bg-[#eef4ff] rounded-md m-1 sm:m-2 ml-0 text-[12px] sm:text-[14px] font-medium text-[#002c5c]"
         >
           NOT APPLIED
         </button>
-        <p class="text-[14px] font-normal text-[#323b49] mb-6">
+        <p
+          class="text-[12px] sm:text-[14px] font-normal text-[#323b49] mb-4 sm:mb-6"
+        >
           Design user interfaces for web and mobile apps. Collaborate with
           developers to implement user-centered designs.
         </p>
         <button
-          class="add-interview p-3 rounded-md border-2 border-green-500 text-green-500 mr-3"
+          class="add-interview p-2 sm:p-3 rounded-md border-2 border-green-500 text-green-500 mr-2 sm:mr-3 text-sm sm:text-base"
         >
           INTERVIEW
         </button>
         <button
-          class="add-rejected p-3 rounded-md border-2 border-red-500 text-red-500"
+          class="add-rejected p-2 sm:p-3 rounded-md border-2 border-red-500 text-red-500 text-sm sm:text-base"
         >
           REJECTED
         </button>
-        <button class="delete-btn absolute right-5 top-3">
-          <i class="fa-regular fa-trash-can"></i>
+        <button class="delete-btn absolute right-3 sm:right-5 top-2 sm:top-3">
+          <i class="fa-regular fa-trash-can text-xs sm:text-[14px]"></i>
         </button>
       </div>
 
       <!-- Job Card 7 -->
       <div
         id="card-7"
-        class="job-card h-auto w-full p-5 shadow-md bg-white rounded-md relative mb-6"
+        class="job-card h-auto w-full p-3 sm:p-5 shadow-md bg-white rounded-md relative mb-3 sm:mb-6"
         status="not-applied"
       >
-        <h1 class="text-[18px] font-semibold text-[#002c5c] mb-2">
+        <h1
+          class="text-[16px] sm:text-[18px] font-semibold text-[#002c5c] mb-2"
+        >
           CyberShield Tech
         </h1>
-        <p class="text-[16px] text-[#64748b] mb-1">Cybersecurity Analyst</p>
-        <p class="text-[14px] text-[#64748b] mb-1">
+        <p class="text-[14px] sm:text-[16px] text-[#64748b] mb-1">
+          Cybersecurity Analyst
+        </p>
+        <p class="text-[12px] sm:text-[14px] text-[#64748b] mb-1">
           Remote • Contract • $90,000 - $130,000
         </p>
         <button
-          class="status-btn p-3 bg-[#eef4ff] rounded-md m-2 ml-0 text-[14px] font-medium text-[#002c5c]"
+          class="status-btn p-2 sm:p-3 bg-[#eef4ff] rounded-md m-1 sm:m-2 ml-0 text-[12px] sm:text-[14px] font-medium text-[#002c5c]"
         >
           NOT APPLIED
         </button>
-        <p class="text-[14px] font-normal text-[#323b49] mb-6">
+        <p
+          class="text-[12px] sm:text-[14px] font-normal text-[#323b49] mb-4 sm:mb-6"
+        >
           Monitor networks, investigate security incidents, and implement
           vulnerability mitigation strategies.
         </p>
         <button
-          class="add-interview p-3 rounded-md border-2 border-green-500 text-green-500 mr-3"
+          class="add-interview p-2 sm:p-3 rounded-md border-2 border-green-500 text-green-500 mr-2 sm:mr-3 text-sm sm:text-base"
         >
           INTERVIEW
         </button>
         <button
-          class="add-rejected p-3 rounded-md border-2 border-red-500 text-red-500"
+          class="add-rejected p-2 sm:p-3 rounded-md border-2 border-red-500 text-red-500 text-sm sm:text-base"
         >
           REJECTED
         </button>
-        <button class="delete-btn absolute right-5 top-3">
-          <i class="fa-regular fa-trash-can"></i>
+        <button class="delete-btn absolute right-3 sm:right-5 top-2 sm:top-3">
+          <i class="fa-regular fa-trash-can text-xs sm:text-[14px]"></i>
         </button>
       </div>
 
       <!-- Job Card 8 -->
       <div
         id="card-8"
-        class="job-card h-auto w-full p-5 shadow-md bg-white rounded-md relative mb-6"
+        class="job-card h-auto w-full p-3 sm:p-5 shadow-md bg-white rounded-md relative mb-3 sm:mb-6"
         status="not-applied"
       >
-        <h1 class="text-[18px] font-semibold text-[#002c5c] mb-2">
+        <h1
+          class="text-[16px] sm:text-[18px] font-semibold text-[#002c5c] mb-2"
+        >
           GreenTech Labs
         </h1>
-        <p class="text-[16px] text-[#64748b] mb-1">
+        <p class="text-[14px] sm:text-[16px] text-[#64748b] mb-1">
           Environmental Data Scientist
         </p>
-        <p class="text-[14px] text-[#64748b] mb-1">
+        <p class="text-[12px] sm:text-[14px] text-[#64748b] mb-1">
           Hybrid • Full-time • $85,000 - $120,000
         </p>
         <button
-          class="status-btn p-3 bg-[#eef4ff] rounded-md m-2 ml-0 text-[14px] font-medium text-[#002c5c]"
+          class="status-btn p-2 sm:p-3 bg-[#eef4ff] rounded-md m-1 sm:m-2 ml-0 text-[12px] sm:text-[14px] font-medium text-[#002c5c]"
         >
           NOT APPLIED
         </button>
-        <p class="text-[14px] font-normal text-[#323b49] mb-6">
+        <p
+          class="text-[12px] sm:text-[14px] font-normal text-[#323b49] mb-4 sm:mb-6"
+        >
           Analyze environmental datasets to provide insights for sustainability
           projects. Build predictive models for climate data.
         </p>
         <button
-          class="add-interview p-3 rounded-md border-2 border-green-500 text-green-500 mr-3"
+          class="add-interview p-2 sm:p-3 rounded-md border-2 border-green-500 text-green-500 mr-2 sm:mr-3 text-sm sm:text-base"
         >
           INTERVIEW
         </button>
         <button
-          class="add-rejected p-3 rounded-md border-2 border-red-500 text-red-500"
+          class="add-rejected p-2 sm:p-3 rounded-md border-2 border-red-500 text-red-500 text-sm sm:text-base"
         >
           REJECTED
         </button>
-        <button class="delete-btn absolute right-5 top-3">
-          <i class="fa-regular fa-trash-can"></i>
+        <button class="delete-btn absolute right-3 sm:right-5 top-2 sm:top-3">
+          <i class="fa-regular fa-trash-can text-xs sm:text-[14px]"></i>
         </button>
       </div>
 
       <!-- Job Card 9 -->
       <div
         id="card-9"
-        class="job-card h-auto w-full p-5 shadow-md bg-white rounded-md relative mb-6"
+        class="job-card h-auto w-full p-3 sm:p-5 shadow-md bg-white rounded-md relative mb-3 sm:mb-6"
         status="not-applied"
       >
-        <h1 class="text-[18px] font-semibold text-[#002c5c] mb-2">
+        <h1
+          class="text-[16px] sm:text-[18px] font-semibold text-[#002c5c] mb-2"
+        >
           Quantum Analytics
         </h1>
-        <p class="text-[16px] text-[#64748b] mb-1">Data Engineer</p>
-        <p class="text-[14px] text-[#64748b] mb-1">
+        <p class="text-[14px] sm:text-[16px] text-[#64748b] mb-1">
+          Data Engineer
+        </p>
+        <p class="text-[12px] sm:text-[14px] text-[#64748b] mb-1">
           Remote • Full-time • $105,000 - $140,000
         </p>
         <button
-          class="status-btn p-3 bg-[#eef4ff] rounded-md m-2 ml-0 text-[14px] font-medium text-[#002c5c]"
+          class="status-btn p-2 sm:p-3 bg-[#eef4ff] rounded-md m-1 sm:m-2 ml-0 text-[12px] sm:text-[14px] font-medium text-[#002c5c]"
         >
           NOT APPLIED
         </button>
-        <p class="text-[14px] font-normal text-[#323b49] mb-6">
+        <p
+          class="text-[12px] sm:text-[14px] font-normal text-[#323b49] mb-4 sm:mb-6"
+        >
           Build and maintain ETL pipelines, optimize data storage, and ensure
           data quality for analytics platforms.
         </p>
         <button
-          class="add-interview p-3 rounded-md border-2 border-green-500 text-green-500 mr-3"
+          class="add-interview p-2 sm:p-3 rounded-md border-2 border-green-500 text-green-500 mr-2 sm:mr-3 text-sm sm:text-base"
         >
           INTERVIEW
         </button>
         <button
-          class="add-rejected p-3 rounded-md border-2 border-red-500 text-red-500"
+          class="add-rejected p-2 sm:p-3 rounded-md border-2 border-red-500 text-red-500 text-sm sm:text-base"
         >
           REJECTED
         </button>
-        <button class="delete-btn absolute right-5 top-3">
-          <i class="fa-regular fa-trash-can"></i>
+        <button class="delete-btn absolute right-3 sm:right-5 top-2 sm:top-3">
+          <i class="fa-regular fa-trash-can text-xs sm:text-[14px]"></i>
         </button>
       </div>
 
       <!-- Job Card 10 -->
       <div
         id="card-10"
-        class="job-card h-auto w-full p-5 shadow-md bg-white rounded-md relative mb-6"
+        class="job-card h-auto w-full p-3 sm:p-5 shadow-md bg-white rounded-md relative mb-3 sm:mb-6"
         status="not-applied"
       >
-        <h1 class="text-[18px] font-semibold text-[#002c5c] mb-2">
+        <h1
+          class="text-[16px] sm:text-[18px] font-semibold text-[#002c5c] mb-2"
+        >
           NextGen Robotics
         </h1>
-        <p class="text-[16px] text-[#64748b] mb-1">Robotics Engineer</p>
-        <p class="text-[14px] text-[#64748b] mb-1">
+        <p class="text-[14px] sm:text-[16px] text-[#64748b] mb-1">
+          Robotics Engineer
+        </p>
+        <p class="text-[12px] sm:text-[14px] text-[#64748b] mb-1">
           Onsite • Full-time • $130,000 - $170,000
         </p>
         <button
-          class="status-btn p-3 bg-[#eef4ff] rounded-md m-2 ml-0 text-[14px] font-medium text-[#002c5c]"
+          class="status-btn p-2 sm:p-3 bg-[#eef4ff] rounded-md m-1 sm:m-2 ml-0 text-[12px] sm:text-[14px] font-medium text-[#002c5c]"
         >
           NOT APPLIED
         </button>
-        <p class="text-[14px] font-normal text-[#323b49] mb-6">
+        <p
+          class="text-[12px] sm:text-[14px] font-normal text-[#323b49] mb-4 sm:mb-6"
+        >
           Design and build autonomous robotic systems. Test prototypes and
           integrate software controls.
         </p>
         <button
-          class="add-interview p-3 rounded-md border-2 border-green-500 text-green-500 mr-3"
+          class="add-interview p-2 sm:p-3 rounded-md border-2 border-green-500 text-green-500 mr-2 sm:mr-3 text-sm sm:text-base"
         >
           INTERVIEW
         </button>
         <button
-          class="add-rejected p-3 rounded-md border-2 border-red-500 text-red-500"
+          class="add-rejected p-2 sm:p-3 rounded-md border-2 border-red-500 text-red-500 text-sm sm:text-base"
         >
           REJECTED
         </button>
-        <button class="delete-btn absolute right-5 top-3">
-          <i class="fa-regular fa-trash-can"></i>
+        <button class="delete-btn absolute right-3 sm:right-5 top-2 sm:top-3">
+          <i class="fa-regular fa-trash-can text-xs sm:text-[14px]"></i>
         </button>
       </div>
 
       <!-- no jobs page -->
-
       <section
         id="no-jobs"
-        class="flex flex-col items-center rounded-md my-[60px] bg-white h-auto p-20 w-full m-auto hidden"
+        class="flex flex-col items-center rounded-md my-[30px] sm:my-[60px] bg-white h-auto p-6 sm:p-20 w-full m-auto hidden"
       >
-        <img class="mb-4" src="./assets/jobs.png" alt="" />
-        <h1 class="mb-3 font-semibold text-[24px]">No jobs available</h1>
-        <p class="text-gray-600">Check back soon for new job opportunities</p>
+        <img class="mb-2 sm:mb-4" src="./assets/jobs.png" alt="" />
+        <h1 class="mb-2 sm:mb-3 font-semibold text-[20px] sm:text-[24px]">
+          No jobs available
+        </h1>
+        <p class="text-gray-600 text-[12px] sm:text-[14px]">
+          Check back soon for new job opportunities
+        </p>
       </section>
     </section>
 
@@ -492,22 +561,22 @@
         rejectedJobs = 0;
 
       function updateButtonStyles(activeBtn) {
-        const allBtn = document.getElementById('all-btn');
-        const interviewBtn = document.getElementById('interview-btn');
-        const rejectedBtn = document.getElementById('rejected-btn');
-        
-        allBtn.style.color = 'gray';
-        allBtn.style.border = '2px solid gray';
-        allBtn.style.backgroundColor = 'white';
-        interviewBtn.style.color = 'gray';
-        interviewBtn.style.border = '2px solid gray';
-        interviewBtn.style.backgroundColor = 'white';
-        rejectedBtn.style.color = 'gray';
-        rejectedBtn.style.border = '2px solid gray';
-        rejectedBtn.style.backgroundColor = 'white';
-        
-        activeBtn.style.color = 'white';
-        activeBtn.style.backgroundColor = 'blue';
+        const allBtn = document.getElementById("all-btn");
+        const interviewBtn = document.getElementById("interview-btn");
+        const rejectedBtn = document.getElementById("rejected-btn");
+
+        allBtn.style.color = "gray";
+        allBtn.style.border = "2px solid gray";
+        allBtn.style.backgroundColor = "white";
+        interviewBtn.style.color = "gray";
+        interviewBtn.style.border = "2px solid gray";
+        interviewBtn.style.backgroundColor = "white";
+        rejectedBtn.style.color = "gray";
+        rejectedBtn.style.border = "2px solid gray";
+        rejectedBtn.style.backgroundColor = "white";
+
+        activeBtn.style.color = "white";
+        activeBtn.style.backgroundColor = "blue";
       }
 
       totalJobs = document.querySelectorAll(".job-card").length;
@@ -525,7 +594,10 @@
           var available = false;
           var counter = 0;
           for (var i = 0; i < allCards.length; i++) {
-            if (allCards[i].getAttribute("status") === "interview" && allCards[i].getAttribute("status") !== "deleted") {
+            if (
+              allCards[i].getAttribute("status") === "interview" &&
+              allCards[i].getAttribute("status") !== "deleted"
+            ) {
               allCards[i].style.display = "block";
               available = true;
               counter++;
@@ -540,7 +612,7 @@
           }
 
           document.getElementById("jobs-count").innerText = counter;
-          updateButtonStyles(document.getElementById('interview-btn'));
+          updateButtonStyles(document.getElementById("interview-btn"));
         });
 
       //  Rejected tab button
@@ -551,7 +623,10 @@
           var available = false;
           var counter = 0;
           for (var i = 0; i < allCards.length; i++) {
-            if (allCards[i].getAttribute("status") === "rejected" && allCards[i].getAttribute("status") !== "deleted") {
+            if (
+              allCards[i].getAttribute("status") === "rejected" &&
+              allCards[i].getAttribute("status") !== "deleted"
+            ) {
               allCards[i].style.display = "block";
               available = true;
               counter++;
@@ -566,7 +641,7 @@
           }
 
           document.getElementById("jobs-count").innerText = counter;
-          updateButtonStyles(document.getElementById('rejected-btn'));
+          updateButtonStyles(document.getElementById("rejected-btn"));
         });
 
       // All tab button
@@ -590,10 +665,10 @@
         }
 
         document.getElementById("jobs-count").innerText = counter;
-        updateButtonStyles(document.getElementById('all-btn'));
+        updateButtonStyles(document.getElementById("all-btn"));
       });
 
-      // adding to interview 
+      // adding to interview
       document.querySelectorAll(".add-interview").forEach(function (btn) {
         btn.addEventListener("click", function (event) {
           const button = event.target;
@@ -609,9 +684,7 @@
             interviewJobs++;
             document.getElementById("interview-jobs").innerText = interviewJobs;
             console.log(interviewJobs);
-          }
-          else if(btnStatus.innerText === "REJECTED")
-          {
+          } else if (btnStatus.innerText === "REJECTED") {
             btnStatus.innerText = "INTERVIEW";
             btnStatus.style.backgroundColor = "#00c950";
             btnStatus.style.color = "white";
@@ -621,6 +694,7 @@
             rejectedJobs--;
             document.getElementById("interview-jobs").innerText = interviewJobs;
             document.getElementById("rejected-jobs").innerText = rejectedJobs;
+            console.log(interviewJobs);
           }
         });
       });
@@ -641,8 +715,7 @@
             rejectedJobs++;
             document.getElementById("rejected-jobs").innerText = rejectedJobs;
             console.log(rejectedJobs);
-          }
-          else if (btnStatus.innerText === "INTERVIEW") {
+          } else if (btnStatus.innerText === "INTERVIEW") {
             btnStatus.innerText = "REJECTED";
             btnStatus.style.backgroundColor = "#ef4444";
             btnStatus.style.color = "white";
@@ -652,44 +725,40 @@
             interviewJobs--;
             document.getElementById("rejected-jobs").innerText = rejectedJobs;
             document.getElementById("interview-jobs").innerText = interviewJobs;
+            console.log(rejectedJobs);
           }
         });
       });
 
+      document.querySelectorAll(".delete-btn").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          const status = this.parentElement.getAttribute("status");
 
-      document.querySelectorAll('.delete-btn').forEach(function (btn) {
-        btn.addEventListener('click', function () {
-          const status = this.parentElement.getAttribute('status');
-          
-          if(status === 'not-applied'){
+          if (status === "not-applied") {
             totalJobs--;
-            document.getElementById('total-jobs').innerText = totalJobs;
-            document.getElementById('total-jobs-count').innerText = totalJobs;
-            document.getElementById('jobs-count').innerText = totalJobs;
-          }
-          else if(status === 'interview'){
+            document.getElementById("total-jobs").innerText = totalJobs;
+            document.getElementById("total-jobs-count").innerText = totalJobs;
+            document.getElementById("jobs-count").innerText = totalJobs;
+          } else if (status === "interview") {
             totalJobs--;
             interviewJobs--;
-            document.getElementById('total-jobs').innerText = totalJobs;
-            document.getElementById('total-jobs-count').innerText = totalJobs;
-            document.getElementById('jobs-count').innerText = interviewJobs;
-            document.getElementById('interview-jobs').innerText = interviewJobs;
-          }
-          else if(status === 'rejected'){
+            document.getElementById("total-jobs").innerText = totalJobs;
+            document.getElementById("total-jobs-count").innerText = totalJobs;
+            document.getElementById("jobs-count").innerText = interviewJobs;
+            document.getElementById("interview-jobs").innerText = interviewJobs;
+          } else if (status === "rejected") {
             totalJobs--;
             rejectedJobs--;
-            document.getElementById('total-jobs').innerText = totalJobs;
-            document.getElementById('total-jobs-count').innerText = totalJobs;
-            document.getElementById('jobs-count').innerText = rejectedJobs;
-            document.getElementById('rejected-jobs').innerText = rejectedJobs;
+            document.getElementById("total-jobs").innerText = totalJobs;
+            document.getElementById("total-jobs-count").innerText = totalJobs;
+            document.getElementById("jobs-count").innerText = rejectedJobs;
+            document.getElementById("rejected-jobs").innerText = rejectedJobs;
           }
-          
-          this.parentElement.setAttribute('status', 'deleted');
-          this.parentElement.style.display = 'none';
+
+          this.parentElement.setAttribute("status", "deleted");
+          this.parentElement.style.display = "none";
         });
       });
-
-
     </script>
   </body>
 </html>
