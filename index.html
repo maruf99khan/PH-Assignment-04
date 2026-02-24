@@ -18,7 +18,7 @@
     />
   </head>
   <body class="h-full w-full bg-[#f8fafc] font-[Geist]">
-      <section class="mx-60 my-10">
+    <section class="mx-60 my-10">
       <h1 id="heading" class="text-[40px] text-[#002c5c] font-bold mb-[20px]">
         Job Application Tracker
       </h1>
@@ -74,28 +74,28 @@
         </div>
         <div>
           <h1 class="text-[16px] font-medium text-[#778599]">
-            <span id="jobs-count">0</span> of <span id="total-jobs-count"></span> Jobs
+            <span id="jobs-count">0</span> of
+            <span id="total-jobs-count"></span> Jobs
           </h1>
         </div>
       </div>
 
-
-
-
       <!-- sorting tabs -->
       <div class="flex gap-4 mb-6">
-        <button id="all-btn"
+        <button
+          id="all-btn"
           class="tab-btn active px-4 py-2 rounded-md bg-blue-500 text-white"
         >
           All
         </button>
-        <button 
+        <button
           id="interview-btn"
           class="tab-btn px-4 py-2 rounded-md text-gray-500 bg-white border-2"
         >
           Interview
         </button>
-        <button id="rejected-btn"
+        <button
+          id="rejected-btn"
           class="tab-btn px-4 py-2 rounded-md text-gray-500 bg-white border-2"
         >
           Rejected
@@ -129,7 +129,9 @@
         >
           INTERVIEW
         </button>
-        <button class="add-rejected p-3 rounded-md border-2 border-red-500 text-red-500">
+        <button
+          class="add-rejected p-3 rounded-md border-2 border-red-500 text-red-500"
+        >
           REJECTED
         </button>
         <button class="absolute right-5 top-3">
@@ -164,7 +166,9 @@
         >
           INTERVIEW
         </button>
-        <button class="add-rejected p-3 rounded-md border-2 border-red-500 text-red-500">
+        <button
+          class="add-rejected p-3 rounded-md border-2 border-red-500 text-red-500"
+        >
           REJECTED
         </button>
         <button class="absolute right-5 top-3">
@@ -199,7 +203,9 @@
         >
           INTERVIEW
         </button>
-        <button class="add-rejected p-3 rounded-md border-2 border-red-500 text-red-500">
+        <button
+          class="add-rejected p-3 rounded-md border-2 border-red-500 text-red-500"
+        >
           REJECTED
         </button>
         <button class="absolute right-5 top-3">
@@ -234,7 +240,9 @@
         >
           INTERVIEW
         </button>
-        <button class="add-rejected p-3 rounded-md border-2 border-red-500 text-red-500">
+        <button
+          class="add-rejected p-3 rounded-md border-2 border-red-500 text-red-500"
+        >
           REJECTED
         </button>
         <button class="absolute right-5 top-3">
@@ -269,7 +277,9 @@
         >
           INTERVIEW
         </button>
-        <button class="add-rejected p-3 rounded-md border-2 border-red-500 text-red-500">
+        <button
+          class="add-rejected p-3 rounded-md border-2 border-red-500 text-red-500"
+        >
           REJECTED
         </button>
         <button class="absolute right-5 top-3">
@@ -304,7 +314,9 @@
         >
           INTERVIEW
         </button>
-        <button class="add-rejected p-3 rounded-md border-2 border-red-500 text-red-500">
+        <button
+          class="add-rejected p-3 rounded-md border-2 border-red-500 text-red-500"
+        >
           REJECTED
         </button>
         <button class="absolute right-5 top-3">
@@ -339,7 +351,9 @@
         >
           INTERVIEW
         </button>
-        <button class="add-rejected p-3 rounded-md border-2 border-red-500 text-red-500">
+        <button
+          class="add-rejected p-3 rounded-md border-2 border-red-500 text-red-500"
+        >
           REJECTED
         </button>
         <button class="absolute right-5 top-3">
@@ -376,7 +390,9 @@
         >
           INTERVIEW
         </button>
-        <button class="add-rejected p-3 rounded-md border-2 border-red-500 text-red-500">
+        <button
+          class="add-rejected p-3 rounded-md border-2 border-red-500 text-red-500"
+        >
           REJECTED
         </button>
         <button class="absolute right-5 top-3">
@@ -411,7 +427,9 @@
         >
           INTERVIEW
         </button>
-        <button class="add-rejected p-3 rounded-md border-2 border-red-500 text-red-500">
+        <button
+          class="add-rejected p-3 rounded-md border-2 border-red-500 text-red-500"
+        >
           REJECTED
         </button>
         <button class="absolute right-5 top-3">
@@ -446,7 +464,9 @@
         >
           INTERVIEW
         </button>
-        <button class="add-rejected p-3 rounded-md border-2 border-red-500 text-red-500">
+        <button
+          class="add-rejected p-3 rounded-md border-2 border-red-500 text-red-500"
+        >
           REJECTED
         </button>
         <button class="absolute right-5 top-3">
@@ -454,28 +474,16 @@
         </button>
       </div>
 
-
-
-
       <!-- no jobs page -->
 
-      <section id="no-jobs" class="flex flex-col items-center rounded-md my-[60px] bg-white h-auto p-20 w-full m-auto hidden" >
-        <img class="mb-4" src="./assets/jobs.png" alt="">
+      <section
+        id="no-jobs"
+        class="flex flex-col items-center rounded-md my-[60px] bg-white h-auto p-20 w-full m-auto hidden"
+      >
+        <img class="mb-4" src="./assets/jobs.png" alt="" />
         <h1 class="mb-3 font-semibold text-[24px]">No jobs available</h1>
         <p class="text-gray-600">Check back soon for new job opportunities</p>
       </section>
-
-
-
-
-
-
-
-
-
-
-
-
     </section>
 
     <script>
@@ -483,62 +491,86 @@
         interviewJobs = 0,
         rejectedJobs = 0;
 
+      function updateButtonStyles(activeBtn) {
+        const allBtn = document.getElementById('all-btn');
+        const interviewBtn = document.getElementById('interview-btn');
+        const rejectedBtn = document.getElementById('rejected-btn');
+        
+        allBtn.style.color = 'gray';
+        allBtn.style.border = '2px solid gray';
+        allBtn.style.backgroundColor = 'white';
+        interviewBtn.style.color = 'gray';
+        interviewBtn.style.border = '2px solid gray';
+        interviewBtn.style.backgroundColor = 'white';
+        rejectedBtn.style.color = 'gray';
+        rejectedBtn.style.border = '2px solid gray';
+        rejectedBtn.style.backgroundColor = 'white';
+        
+        activeBtn.style.color = 'white';
+        activeBtn.style.backgroundColor = 'blue';
+      }
+
       totalJobs = document.querySelectorAll(".job-card").length;
-      document.getElementById('total-jobs').innerText = totalJobs;
-      document.getElementById('jobs-count').innerText = totalJobs;
-      document.getElementById('total-jobs-count').innerText = totalJobs;
-      document.getElementById('interview-jobs').innerText = interviewJobs;
-      document.getElementById('rejected-jobs').innerText = rejectedJobs;
-      // Interview button
-      document.getElementById("interview-btn").addEventListener("click", function() {
-        var allCards = document.querySelectorAll(".job-card");
-        var available = false;
-        var counter = 0;
-        for (var i = 0; i < allCards.length; i++) {
-          if (allCards[i].getAttribute("status") === "interview") {
-            allCards[i].style.display = "block";
-            available = true;
-            counter++;
-          } else {
-            allCards[i].style.display = "none";
+      document.getElementById("total-jobs").innerText = totalJobs;
+      document.getElementById("jobs-count").innerText = totalJobs;
+      document.getElementById("total-jobs-count").innerText = totalJobs;
+      document.getElementById("interview-jobs").innerText = interviewJobs;
+      document.getElementById("rejected-jobs").innerText = rejectedJobs;
+
+      // Interview tab button
+      document
+        .getElementById("interview-btn")
+        .addEventListener("click", function () {
+          var allCards = document.querySelectorAll(".job-card");
+          var available = false;
+          var counter = 0;
+          for (var i = 0; i < allCards.length; i++) {
+            if (allCards[i].getAttribute("status") === "interview") {
+              allCards[i].style.display = "block";
+              available = true;
+              counter++;
+            } else {
+              allCards[i].style.display = "none";
+            }
           }
-        }
-        if(!available){
-          document.getElementById('no-jobs').style.display = "flex";
-        } else {
-          document.getElementById('no-jobs').style.display = "none";
-        }
-
-
-        document.getElementById('jobs-count').innerText = counter;
-        
-      });
-
-    //  Rejected button
-      document.getElementById("rejected-btn").addEventListener("click", function() {
-        var allCards = document.querySelectorAll(".job-card");
-        var available = false;
-        var counter = 0;
-        for (var i = 0; i < allCards.length; i++) {
-          if (allCards[i].getAttribute("status") === "rejected") {
-            allCards[i].style.display = "block";
-            available = true;
-            counter++;
+          if (!available) {
+            document.getElementById("no-jobs").style.display = "flex";
           } else {
-            allCards[i].style.display = "none";
+            document.getElementById("no-jobs").style.display = "none";
           }
-        }
-        if(!available){
-          document.getElementById('no-jobs').style.display = "flex";
-        } else {
-          document.getElementById('no-jobs').style.display = "none";
-        }
-        
-        document.getElementById('jobs-count').innerText = counter;
-      });
 
-      // All button
-      document.getElementById("all-btn").addEventListener("click", function() {
+          document.getElementById("jobs-count").innerText = counter;
+          updateButtonStyles(document.getElementById('interview-btn'));
+        });
+
+      //  Rejected tab button
+      document
+        .getElementById("rejected-btn")
+        .addEventListener("click", function () {
+          var allCards = document.querySelectorAll(".job-card");
+          var available = false;
+          var counter = 0;
+          for (var i = 0; i < allCards.length; i++) {
+            if (allCards[i].getAttribute("status") === "rejected") {
+              allCards[i].style.display = "block";
+              available = true;
+              counter++;
+            } else {
+              allCards[i].style.display = "none";
+            }
+          }
+          if (!available) {
+            document.getElementById("no-jobs").style.display = "flex";
+          } else {
+            document.getElementById("no-jobs").style.display = "none";
+          }
+
+          document.getElementById("jobs-count").innerText = counter;
+          updateButtonStyles(document.getElementById('rejected-btn'));
+        });
+
+      // All tab button
+      document.getElementById("all-btn").addEventListener("click", function () {
         var allCards = document.querySelectorAll(".job-card");
         var available = false;
         var counter = 0;
@@ -547,59 +579,80 @@
           available = true;
           counter++;
         }
-        if(!available){
-          document.getElementById('no-jobs').style.display = "flex";
+        if (!available) {
+          document.getElementById("no-jobs").style.display = "flex";
         } else {
-          document.getElementById('no-jobs').style.display = "none";
+          document.getElementById("no-jobs").style.display = "none";
         }
-        
-        document.getElementById('jobs-count').innerText = counter;
+
+        document.getElementById("jobs-count").innerText = counter;
+        updateButtonStyles(document.getElementById('all-btn'));
       });
 
+      // adding to interview 
+      document.querySelectorAll(".add-interview").forEach(function (btn) {
+        btn.addEventListener("click", function (event) {
+          const button = event.target;
+          const card = button.parentElement;
+          const btnStatus = card.querySelector(".status-btn");
 
-      // adding to interview - works for all cards
-      document.querySelectorAll('.add-interview').forEach(function(btn) {
-        btn.addEventListener('click', function(e) {
-          const button = e.target;
-          const card = button.closest('.job-card');
-          const btnStatus = card.querySelector('.status-btn');
-          
-          if(btnStatus.innerText === 'NOT APPLIED'){
-            btnStatus.innerText = 'INTERVIEW';
-            btnStatus.style.backgroundColor = '#00c950';
-            btnStatus.style.color = 'white';
-            card.setAttribute('status', 'interview');
+          if (btnStatus.innerText === "NOT APPLIED") {
+            btnStatus.innerText = "INTERVIEW";
+            btnStatus.style.backgroundColor = "#00c950";
+            btnStatus.style.color = "white";
+            card.setAttribute("status", "interview");
 
             interviewJobs++;
-            document.getElementById('interview-jobs').innerText = interviewJobs;
+            document.getElementById("interview-jobs").innerText = interviewJobs;
+            console.log(interviewJobs);
+          }
+          else if(btnStatus.innerText === "REJECTED")
+          {
+            btnStatus.innerText = "INTERVIEW";
+            btnStatus.style.backgroundColor = "#00c950";
+            btnStatus.style.color = "white";
+            card.setAttribute("status", "interview");
+
+            interviewJobs++;
+            rejectedJobs--;
+            document.getElementById("interview-jobs").innerText = interviewJobs;
+            document.getElementById("rejected-jobs").innerText = rejectedJobs;
             console.log(interviewJobs);
           }
         });
       });
 
-      // adding to rejected - works for all cards
-      document.querySelectorAll('.add-rejected').forEach(function(btn) {
-        btn.addEventListener('click', function(e) {
-          const button = e.target;
-          const card = button.closest('.job-card');
-          const btnStatus = card.querySelector('.status-btn');
-          
-          if(btnStatus.innerText === 'NOT APPLIED'){
-            btnStatus.innerText = 'REJECTED';
-            btnStatus.style.backgroundColor = '#ef4444';
-            btnStatus.style.color = 'white';
-            card.setAttribute('status', 'rejected');
+      // adding to rejected
+      document.querySelectorAll(".add-rejected").forEach(function (btn) {
+        btn.addEventListener("click", function (event) {
+          const button = event.target;
+          const card = button.parentElement;
+          const btnStatus = card.querySelector(".status-btn");
+
+          if (btnStatus.innerText === "NOT APPLIED") {
+            btnStatus.innerText = "REJECTED";
+            btnStatus.style.backgroundColor = "#ef4444";
+            btnStatus.style.color = "white";
+            card.setAttribute("status", "rejected");
 
             rejectedJobs++;
-            document.getElementById('rejected-jobs').innerText = rejectedJobs;
+            document.getElementById("rejected-jobs").innerText = rejectedJobs;
+            console.log(rejectedJobs);
+          }
+          else if (btnStatus.innerText === "INTERVIEW") {
+            btnStatus.innerText = "REJECTED";
+            btnStatus.style.backgroundColor = "#ef4444";
+            btnStatus.style.color = "white";
+            card.setAttribute("status", "rejected");
+
+            rejectedJobs++;
+            interviewJobs--;
+            document.getElementById("rejected-jobs").innerText = rejectedJobs;
+            document.getElementById("interview-jobs").innerText = interviewJobs;
             console.log(rejectedJobs);
           }
         });
       });
-
-
-
-
     </script>
   </body>
 </html>
