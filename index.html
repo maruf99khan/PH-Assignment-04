@@ -18,7 +18,7 @@
     />
   </head>
   <body class="h-full w-full bg-[#f8fafc] font-[Geist]">
-    <section class="mx-[240px] my-[40px]">
+      <section class="mx-60 my-10">
       <h1 id="heading" class="text-[40px] text-[#002c5c] font-bold mb-[20px]">
         Job Application Tracker
       </h1>
@@ -56,7 +56,7 @@
             Rejected
           </h4>
           <h2
-            id="rejecter-jobs"
+            id="rejected-jobs"
             class="px-[20px] py-[10px] text-red-500 text-[24px] font-bold"
           >
             0
@@ -65,7 +65,7 @@
       </div>
     </section>
 
-    <section id="cards" class="mx-[240px] my-30px">
+    <section id="cards" class="mx-60 my-6">
       <div class="flex justify-between mb-[20px]">
         <div>
           <h1 class="text-[#002c5c] font-semibold text-[20px]">
@@ -79,19 +79,23 @@
         </div>
       </div>
 
+
+
+
+      <!-- sorting tabs -->
       <div class="flex gap-4 mb-6">
-        <button
+        <button id="all-btn"
           class="tab-btn active px-4 py-2 rounded-md bg-blue-500 text-white"
         >
           All
         </button>
-        <button
-          onclick="showInterviewJobs()"
+        <button 
+          id="interview-btn"
           class="tab-btn px-4 py-2 rounded-md text-gray-500 bg-white border-2"
         >
           Interview
         </button>
-        <button
+        <button id="rejected-btn"
           class="tab-btn px-4 py-2 rounded-md text-gray-500 bg-white border-2"
         >
           Rejected
@@ -102,6 +106,7 @@
       <div
         id="card-1"
         class="job-card h-auto w-full p-5 shadow-md bg-white rounded-md relative mb-6"
+        status="not-applied"
       >
         <h1 class="text-[18px] font-semibold text-[#002c5c] mb-2">
           TechNova Solutions
@@ -136,6 +141,7 @@
       <div
         id="card-2"
         class="job-card h-auto w-full p-5 shadow-md bg-white rounded-md relative mb-6"
+        status="not-applied"
       >
         <h1 class="text-[18px] font-semibold text-[#002c5c] mb-2">
           ByteWorks Inc
@@ -170,6 +176,7 @@
       <div
         id="card-3"
         class="job-card h-auto w-full p-5 shadow-md bg-white rounded-md relative mb-6"
+        status="not-applied"
       >
         <h1 class="text-[18px] font-semibold text-[#002c5c] mb-2">
           CloudCore Labs
@@ -204,6 +211,7 @@
       <div
         id="card-4"
         class="job-card h-auto w-full p-5 shadow-md bg-white rounded-md relative mb-6"
+        status="not-applied"
       >
         <h1 class="text-[18px] font-semibold text-[#002c5c] mb-2">
           DataSense AI
@@ -238,6 +246,7 @@
       <div
         id="card-5"
         class="job-card h-auto w-full p-5 shadow-md bg-white rounded-md relative mb-6"
+        status="not-applied"
       >
         <h1 class="text-[18px] font-semibold text-[#002c5c] mb-2">
           FinTech Hive
@@ -272,6 +281,7 @@
       <div
         id="card-6"
         class="job-card h-auto w-full p-5 shadow-md bg-white rounded-md relative mb-6"
+        status="not-applied"
       >
         <h1 class="text-[18px] font-semibold text-[#002c5c] mb-2">
           NeoCloud Systems
@@ -306,6 +316,7 @@
       <div
         id="card-7"
         class="job-card h-auto w-full p-5 shadow-md bg-white rounded-md relative mb-6"
+        status="not-applied"
       >
         <h1 class="text-[18px] font-semibold text-[#002c5c] mb-2">
           CyberShield Tech
@@ -340,6 +351,7 @@
       <div
         id="card-8"
         class="job-card h-auto w-full p-5 shadow-md bg-white rounded-md relative mb-6"
+        status="not-applied"
       >
         <h1 class="text-[18px] font-semibold text-[#002c5c] mb-2">
           GreenTech Labs
@@ -376,6 +388,7 @@
       <div
         id="card-9"
         class="job-card h-auto w-full p-5 shadow-md bg-white rounded-md relative mb-6"
+        status="not-applied"
       >
         <h1 class="text-[18px] font-semibold text-[#002c5c] mb-2">
           Quantum Analytics
@@ -410,6 +423,7 @@
       <div
         id="card-10"
         class="job-card h-auto w-full p-5 shadow-md bg-white rounded-md relative mb-6"
+        status="not-applied"
       >
         <h1 class="text-[18px] font-semibold text-[#002c5c] mb-2">
           NextGen Robotics
@@ -439,6 +453,29 @@
           <i class="fa-regular fa-trash-can"></i>
         </button>
       </div>
+
+
+
+
+      <!-- no jobs page -->
+
+      <section>
+        <img src="./assets/jobs.png" alt="">
+        <h1>No jobs available</h1>
+        
+      </section>
+
+
+
+
+
+
+
+
+
+
+
+
     </section>
 
     <script>
@@ -447,10 +484,44 @@
         rejectedJobs = 0;
 
       totalJobs = document.querySelectorAll(".job-card").length;
+      document.getElementById('total-jobs').innerText = totalJobs;
+      document.getElementById('interview-jobs').innerText = interviewJobs;
+      document.getElementById('rejected-jobs').innerText = rejectedJobs;
+      // Interview button
+      document.getElementById("interview-btn").addEventListener("click", function() {
+        var allCards = document.querySelectorAll(".job-card");
+        var available = false;
+        for (var i = 0; i < allCards.length; i++) {
+          if (allCards[i].getAttribute("status") === "interview") {
+            allCards[i].style.display = "block";
+            available = true;
+          } else {
+            allCards[i].style.display = "none";
+          }
+        }
+        var noJobs = document.getElementById('cards').innerHTML;
+        
+      });
 
-      const interviewClicked = document.getElementById('interview-page').addEventListener('click', () => {
-        alert("button clicked!");
-      })
+      // Rejected button
+      document.getElementById("rejected-btn").addEventListener("click", function() {
+        var allCards = document.querySelectorAll(".job-card");
+        for (var i = 0; i < allCards.length; i++) {
+          if (allCards[i].getAttribute("status") === "rejected") {
+            allCards[i].style.display = "block";
+          } else {
+            allCards[i].style.display = "none";
+          }
+        }
+      });
+
+      // All button
+      document.getElementById("all-btn").addEventListener("click", function() {
+        var allCards = document.querySelectorAll(".job-card");
+        for (var i = 0; i < allCards.length; i++) {
+          allCards[i].style.display = "block";
+        }
+      });
     </script>
   </body>
 </html>
