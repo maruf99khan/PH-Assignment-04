@@ -74,7 +74,7 @@
         </div>
         <div>
           <h1 class="text-[16px] font-medium text-[#778599]">
-            <span id="total-jobs-count">0</span> Jobs
+            <span id="jobs-count">0</span> of <span id="total-jobs-count"></span> Jobs
           </h1>
         </div>
       </div>
@@ -116,7 +116,7 @@
           Onsite • Full-time • $90,000 - $120,000
         </p>
         <button
-          class="not-applied p-3 bg-[#eef4ff] rounded-md m-2 ml-0 text-[14px] font-medium text-[#002c5c]"
+          class="status-btn p-3 bg-[#eef4ff] rounded-md m-2 ml-0 text-[14px] font-medium text-[#002c5c]"
         >
           NOT APPLIED
         </button>
@@ -124,12 +124,12 @@
           Build responsive web interfaces using React.js and Tailwind CSS.
           Collaborate with design teams to improve UX.
         </p>
-        <button id="interview-page"
-          class="p-3 rounded-md border-2 border-green-500 text-green-500 mr-3"
+        <button
+          class="add-interview p-3 rounded-md border-2 border-green-500 text-green-500 mr-3"
         >
           INTERVIEW
         </button>
-        <button class="p-3 rounded-md border-2 border-red-500 text-red-500">
+        <button class="add-rejected p-3 rounded-md border-2 border-red-500 text-red-500">
           REJECTED
         </button>
         <button class="absolute right-5 top-3">
@@ -151,7 +151,7 @@
           Remote • Full-time • $110,000 - $140,000
         </p>
         <button
-          class="p-3 bg-[#eef4ff] rounded-md m-2 ml-0 text-[14px] font-medium text-[#002c5c]"
+          class="status-btn p-3 bg-[#eef4ff] rounded-md m-2 ml-0 text-[14px] font-medium text-[#002c5c]"
         >
           NOT APPLIED
         </button>
@@ -160,11 +160,11 @@
           queries and ensure high availability.
         </p>
         <button
-          class="p-3 rounded-md border-2 border-green-500 text-green-500 mr-3"
+          class="add-interview p-3 rounded-md border-2 border-green-500 text-green-500 mr-3"
         >
           INTERVIEW
         </button>
-        <button class="p-3 rounded-md border-2 border-red-500 text-red-500">
+        <button class="add-rejected p-3 rounded-md border-2 border-red-500 text-red-500">
           REJECTED
         </button>
         <button class="absolute right-5 top-3">
@@ -186,7 +186,7 @@
           Remote • Contract • $80/hr - $120/hr
         </p>
         <button
-          class="p-3 bg-[#eef4ff] rounded-md m-2 ml-0 text-[14px] font-medium text-[#002c5c]"
+          class="status-btn p-3 bg-[#eef4ff] rounded-md m-2 ml-0 text-[14px] font-medium text-[#002c5c]"
         >
           NOT APPLIED
         </button>
@@ -195,11 +195,11 @@
           infrastructure on AWS and Azure.
         </p>
         <button
-          class="p-3 rounded-md border-2 border-green-500 text-green-500 mr-3"
+          class="add-interview p-3 rounded-md border-2 border-green-500 text-green-500 mr-3"
         >
           INTERVIEW
         </button>
-        <button class="p-3 rounded-md border-2 border-red-500 text-red-500">
+        <button class="add-rejected p-3 rounded-md border-2 border-red-500 text-red-500">
           REJECTED
         </button>
         <button class="absolute right-5 top-3">
@@ -221,7 +221,7 @@
           Hybrid • Full-time • $120,000 - $160,000
         </p>
         <button
-          class="p-3 bg-[#eef4ff] rounded-md m-2 ml-0 text-[14px] font-medium text-[#002c5c]"
+          class="status-btn p-3 bg-[#eef4ff] rounded-md m-2 ml-0 text-[14px] font-medium text-[#002c5c]"
         >
           NOT APPLIED
         </button>
@@ -230,11 +230,11 @@
           optimize model performance.
         </p>
         <button
-          class="p-3 rounded-md border-2 border-green-500 text-green-500 mr-3"
+          class="add-interview p-3 rounded-md border-2 border-green-500 text-green-500 mr-3"
         >
           INTERVIEW
         </button>
-        <button class="p-3 rounded-md border-2 border-red-500 text-red-500">
+        <button class="add-rejected p-3 rounded-md border-2 border-red-500 text-red-500">
           REJECTED
         </button>
         <button class="absolute right-5 top-3">
@@ -256,7 +256,7 @@
           Remote • Full-time • $100,000 - $150,000
         </p>
         <button
-          class="p-3 bg-[#eef4ff] rounded-md m-2 ml-0 text-[14px] font-medium text-[#002c5c]"
+          class="status-btn p-3 bg-[#eef4ff] rounded-md m-2 ml-0 text-[14px] font-medium text-[#002c5c]"
         >
           NOT APPLIED
         </button>
@@ -265,11 +265,11 @@
           Maintain API security and performance.
         </p>
         <button
-          class="p-3 rounded-md border-2 border-green-500 text-green-500 mr-3"
+          class="add-interview p-3 rounded-md border-2 border-green-500 text-green-500 mr-3"
         >
           INTERVIEW
         </button>
-        <button class="p-3 rounded-md border-2 border-red-500 text-red-500">
+        <button class="add-rejected p-3 rounded-md border-2 border-red-500 text-red-500">
           REJECTED
         </button>
         <button class="absolute right-5 top-3">
@@ -291,7 +291,7 @@
           Onsite • Full-time • $70,000 - $100,000
         </p>
         <button
-          class="p-3 bg-[#eef4ff] rounded-md m-2 ml-0 text-[14px] font-medium text-[#002c5c]"
+          class="status-btn p-3 bg-[#eef4ff] rounded-md m-2 ml-0 text-[14px] font-medium text-[#002c5c]"
         >
           NOT APPLIED
         </button>
@@ -300,11 +300,11 @@
           developers to implement user-centered designs.
         </p>
         <button
-          class="p-3 rounded-md border-2 border-green-500 text-green-500 mr-3"
+          class="add-interview p-3 rounded-md border-2 border-green-500 text-green-500 mr-3"
         >
           INTERVIEW
         </button>
-        <button class="p-3 rounded-md border-2 border-red-500 text-red-500">
+        <button class="add-rejected p-3 rounded-md border-2 border-red-500 text-red-500">
           REJECTED
         </button>
         <button class="absolute right-5 top-3">
@@ -326,7 +326,7 @@
           Remote • Contract • $90,000 - $130,000
         </p>
         <button
-          class="p-3 bg-[#eef4ff] rounded-md m-2 ml-0 text-[14px] font-medium text-[#002c5c]"
+          class="status-btn p-3 bg-[#eef4ff] rounded-md m-2 ml-0 text-[14px] font-medium text-[#002c5c]"
         >
           NOT APPLIED
         </button>
@@ -335,11 +335,11 @@
           vulnerability mitigation strategies.
         </p>
         <button
-          class="p-3 rounded-md border-2 border-green-500 text-green-500 mr-3"
+          class="add-interview p-3 rounded-md border-2 border-green-500 text-green-500 mr-3"
         >
           INTERVIEW
         </button>
-        <button class="p-3 rounded-md border-2 border-red-500 text-red-500">
+        <button class="add-rejected p-3 rounded-md border-2 border-red-500 text-red-500">
           REJECTED
         </button>
         <button class="absolute right-5 top-3">
@@ -363,7 +363,7 @@
           Hybrid • Full-time • $85,000 - $120,000
         </p>
         <button
-          class="p-3 bg-[#eef4ff] rounded-md m-2 ml-0 text-[14px] font-medium text-[#002c5c]"
+          class="status-btn p-3 bg-[#eef4ff] rounded-md m-2 ml-0 text-[14px] font-medium text-[#002c5c]"
         >
           NOT APPLIED
         </button>
@@ -372,11 +372,11 @@
           projects. Build predictive models for climate data.
         </p>
         <button
-          class="p-3 rounded-md border-2 border-green-500 text-green-500 mr-3"
+          class="add-interview p-3 rounded-md border-2 border-green-500 text-green-500 mr-3"
         >
           INTERVIEW
         </button>
-        <button class="p-3 rounded-md border-2 border-red-500 text-red-500">
+        <button class="add-rejected p-3 rounded-md border-2 border-red-500 text-red-500">
           REJECTED
         </button>
         <button class="absolute right-5 top-3">
@@ -398,7 +398,7 @@
           Remote • Full-time • $105,000 - $140,000
         </p>
         <button
-          class="p-3 bg-[#eef4ff] rounded-md m-2 ml-0 text-[14px] font-medium text-[#002c5c]"
+          class="status-btn p-3 bg-[#eef4ff] rounded-md m-2 ml-0 text-[14px] font-medium text-[#002c5c]"
         >
           NOT APPLIED
         </button>
@@ -407,11 +407,11 @@
           data quality for analytics platforms.
         </p>
         <button
-          class="p-3 rounded-md border-2 border-green-500 text-green-500 mr-3"
+          class="add-interview p-3 rounded-md border-2 border-green-500 text-green-500 mr-3"
         >
           INTERVIEW
         </button>
-        <button class="p-3 rounded-md border-2 border-red-500 text-red-500">
+        <button class="add-rejected p-3 rounded-md border-2 border-red-500 text-red-500">
           REJECTED
         </button>
         <button class="absolute right-5 top-3">
@@ -433,7 +433,7 @@
           Onsite • Full-time • $130,000 - $170,000
         </p>
         <button
-          class="p-3 bg-[#eef4ff] rounded-md m-2 ml-0 text-[14px] font-medium text-[#002c5c]"
+          class="status-btn p-3 bg-[#eef4ff] rounded-md m-2 ml-0 text-[14px] font-medium text-[#002c5c]"
         >
           NOT APPLIED
         </button>
@@ -442,11 +442,11 @@
           integrate software controls.
         </p>
         <button
-          class="p-3 rounded-md border-2 border-green-500 text-green-500 mr-3"
+          class="add-interview p-3 rounded-md border-2 border-green-500 text-green-500 mr-3"
         >
           INTERVIEW
         </button>
-        <button class="p-3 rounded-md border-2 border-red-500 text-red-500">
+        <button class="add-rejected p-3 rounded-md border-2 border-red-500 text-red-500">
           REJECTED
         </button>
         <button class="absolute right-5 top-3">
@@ -485,16 +485,45 @@
 
       totalJobs = document.querySelectorAll(".job-card").length;
       document.getElementById('total-jobs').innerText = totalJobs;
+      document.getElementById('jobs-count').innerText = totalJobs;
+      document.getElementById('total-jobs-count').innerText = totalJobs;
       document.getElementById('interview-jobs').innerText = interviewJobs;
       document.getElementById('rejected-jobs').innerText = rejectedJobs;
       // Interview button
       document.getElementById("interview-btn").addEventListener("click", function() {
         var allCards = document.querySelectorAll(".job-card");
         var available = false;
+        var counter = 0;
         for (var i = 0; i < allCards.length; i++) {
           if (allCards[i].getAttribute("status") === "interview") {
             allCards[i].style.display = "block";
             available = true;
+            counter++;
+          } else {
+            allCards[i].style.display = "none";
+          }
+        }
+        if(!available){
+          document.getElementById('no-jobs').style.display = "flex";
+        } else {
+          document.getElementById('no-jobs').style.display = "none";
+        }
+
+
+        document.getElementById('jobs-count').innerText = counter;
+        
+      });
+
+    //  Rejected button
+      document.getElementById("rejected-btn").addEventListener("click", function() {
+        var allCards = document.querySelectorAll(".job-card");
+        var available = false;
+        var counter = 0;
+        for (var i = 0; i < allCards.length; i++) {
+          if (allCards[i].getAttribute("status") === "rejected") {
+            allCards[i].style.display = "block";
+            available = true;
+            counter++;
           } else {
             allCards[i].style.display = "none";
           }
@@ -505,41 +534,72 @@
           document.getElementById('no-jobs').style.display = "none";
         }
         
-      });
-
-      // Rejected button
-      document.getElementById("rejected-btn").addEventListener("click", function() {
-        var allCards = document.querySelectorAll(".job-card");
-        var available = false;
-        for (var i = 0; i < allCards.length; i++) {
-          if (allCards[i].getAttribute("status") === "rejected") {
-            allCards[i].style.display = "block";
-            available = true;
-          } else {
-            allCards[i].style.display = "none";
-          }
-        }
-        if(!available){
-          document.getElementById('no-jobs').style.display = "flex";
-        } else {
-          document.getElementById('no-jobs').style.display = "none";
-        }
+        document.getElementById('jobs-count').innerText = counter;
       });
 
       // All button
       document.getElementById("all-btn").addEventListener("click", function() {
         var allCards = document.querySelectorAll(".job-card");
         var available = false;
+        var counter = 0;
         for (var i = 0; i < allCards.length; i++) {
           allCards[i].style.display = "block";
           available = true;
+          counter++;
         }
         if(!available){
           document.getElementById('no-jobs').style.display = "flex";
         } else {
           document.getElementById('no-jobs').style.display = "none";
         }
+        
+        document.getElementById('jobs-count').innerText = counter;
       });
+
+
+      // adding to interview - works for all cards
+      document.querySelectorAll('.add-interview').forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+          const button = e.target;
+          const card = button.closest('.job-card');
+          const btnStatus = card.querySelector('.status-btn');
+          
+          if(btnStatus.innerText === 'NOT APPLIED'){
+            btnStatus.innerText = 'INTERVIEW';
+            btnStatus.style.backgroundColor = '#00c950';
+            btnStatus.style.color = 'white';
+            card.setAttribute('status', 'interview');
+
+            interviewJobs++;
+            document.getElementById('interview-jobs').innerText = interviewJobs;
+            console.log(interviewJobs);
+          }
+        });
+      });
+
+      // adding to rejected - works for all cards
+      document.querySelectorAll('.add-rejected').forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+          const button = e.target;
+          const card = button.closest('.job-card');
+          const btnStatus = card.querySelector('.status-btn');
+          
+          if(btnStatus.innerText === 'NOT APPLIED'){
+            btnStatus.innerText = 'REJECTED';
+            btnStatus.style.backgroundColor = '#ef4444';
+            btnStatus.style.color = 'white';
+            card.setAttribute('status', 'rejected');
+
+            rejectedJobs++;
+            document.getElementById('rejected-jobs').innerText = rejectedJobs;
+            console.log(rejectedJobs);
+          }
+        });
+      });
+
+
+
+
     </script>
   </body>
 </html>
