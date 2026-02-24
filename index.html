@@ -459,10 +459,10 @@
 
       <!-- no jobs page -->
 
-      <section>
-        <img src="./assets/jobs.png" alt="">
-        <h1>No jobs available</h1>
-        
+      <section id="no-jobs" class="flex flex-col items-center rounded-md my-[60px] bg-white h-auto p-20 w-full m-auto hidden" >
+        <img class="mb-4" src="./assets/jobs.png" alt="">
+        <h1 class="mb-3 font-semibold text-[24px]">No jobs available</h1>
+        <p class="text-gray-600">Check back soon for new job opportunities</p>
       </section>
 
 
@@ -499,27 +499,45 @@
             allCards[i].style.display = "none";
           }
         }
-        var noJobs = document.getElementById('cards').innerHTML;
+        if(!available){
+          document.getElementById('no-jobs').style.display = "flex";
+        } else {
+          document.getElementById('no-jobs').style.display = "none";
+        }
         
       });
 
       // Rejected button
       document.getElementById("rejected-btn").addEventListener("click", function() {
         var allCards = document.querySelectorAll(".job-card");
+        var available = false;
         for (var i = 0; i < allCards.length; i++) {
           if (allCards[i].getAttribute("status") === "rejected") {
             allCards[i].style.display = "block";
+            available = true;
           } else {
             allCards[i].style.display = "none";
           }
+        }
+        if(!available){
+          document.getElementById('no-jobs').style.display = "flex";
+        } else {
+          document.getElementById('no-jobs').style.display = "none";
         }
       });
 
       // All button
       document.getElementById("all-btn").addEventListener("click", function() {
         var allCards = document.querySelectorAll(".job-card");
+        var available = false;
         for (var i = 0; i < allCards.length; i++) {
           allCards[i].style.display = "block";
+          available = true;
+        }
+        if(!available){
+          document.getElementById('no-jobs').style.display = "flex";
+        } else {
+          document.getElementById('no-jobs').style.display = "none";
         }
       });
     </script>
